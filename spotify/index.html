@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Playlist</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="">
+    <div class="container-fluid p-0">
+      <div class="row m-0 justify-content-center text-center">
+        <div class="col-12">
+          <img
+            src="https://i.pinimg.com/originals/27/6f/27/276f273d11f8b9dbc0a9c55bb38ea8c6.gif"
+            style="height: 400px; width: 100%"
+          />
+        </div>
+      </div>
+      <div class="row m-0 justify-content-center text-center" id="wait">
+        <div class="col-12 text-center">
+          <img src="./Media/loading.gif" style="height: 200px" />
+        </div>
+      </div>
+      <div class="row m-0 justify-content-center text-center py-1" id="login">
+        <div class="col-4">
+          <a href="#" style="text-decoration: none" id="lg">
+            <div class="btn btn-success d-block">Login</div>
+          </a>
+          <div class="col-12 heading2">Please Login to Continue</div>
+        </div>
+      </div>
+      <div class="row m-0 p-2 justify-content-between" id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-2 w-100">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto w-100">
+              <li class="nav-item active">
+                <a class="nav-link" href="#" id="myplaylists">Playlists </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="featuredplaylist"
+                  >Featured Playlists</a
+                >
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 w-100 justify-content-end">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                id="searchtrack"
+                placeholder="Search Track"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="button"
+                id="tracksbutton"
+              >
+                Tracks
+              </button>
+            </form>
+          </div>
+        </nav>
+
+        <div class="row w-100">
+          <div class="col-md-12" id="results">
+            <div class="row">
+              <div
+                class="col-12 box box-head heading2 text-center"
+                id="resultheading"
+              >
+                Sahil
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <a href="#" class="" style="text-decoration: none" id="prev">
+                  prev
+                </a>
+              </div>
+              <div class="col-6 text-right">
+                <a href="#" class="" style="text-decoration: none" id="next">
+                  next
+                </a>
+              </div>
+            </div>
+            <div
+              class="row box justify-content-center"
+              style="height: 500px; overflow: scroll"
+              id="resultcontent"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>
