@@ -4,6 +4,12 @@ import getuserid from "./getuserid.js";
 import getfeaturedplaylists from "./getfeaturedplaylists.js";
 import search from "./search.js";
 
+import login from "./login.js";
+import getplaylists from "./getplaylists.js";
+import getuserid from "./getuserid.js";
+import getfeaturedplaylists from "./getfeaturedplaylists.js";
+import search from "./search.js";
+
 let access_token = "";
 let query = [...window.location.href];
 let str = [...window.location.href];
@@ -28,9 +34,7 @@ let user_id = "";
 
 if (access_token.length > 0) {
   setTimeout(() => {
-    location.replace(
-      `https://mohanraj194.github.io/Guvi_task/hackathon/spotify/`
-    );
+    location.replace(`https://github.com/arulselvi1/Hack/tree/main/spotify/`);
   }, 3600000);
   document.getElementById("wait").hidden = true;
   document.getElementById("login").hidden = true;
@@ -49,7 +53,7 @@ if (access_token.length > 0) {
   };
   document.getElementById("myplaylists").click();
 } else {
-  let redirect_uri = "https://github.com/arulselvi1/Hack1/spotify/";
+  let redirect_uri = "https://github.com/arulselvi1/Hack/tree/main/spotify/";
   let scope =
     "user-read-playback-position user-read-private user-read-email user-library-read user-library-modify user-top-read playlist-read-collaborative playlist-modify-public playlist-modify-private ugc-image-upload user-follow-read user-follow-modify user-read-playback-state user-modify-playback-state user-read-currently-playing user-read-recently-played";
   redirect_uri = encodeURIComponent(redirect_uri);
@@ -59,3 +63,4 @@ if (access_token.length > 0) {
   document.getElementById("wait").hidden = false;
   login(redirect_uri, "token", client_id, scope);
 }
+
